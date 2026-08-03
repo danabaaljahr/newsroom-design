@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>دانه بالجهر | أعمال صحفية</title>
+  <meta name="description" content="أرشيف صحفي شخصي لدانه بالجهر يضم الأخبار والتقارير والمقالات.">
+  <meta name="theme-color" content="#0b1220">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#home" aria-label="الرئيسية">
+        <span class="brand-mark">د</span>
+        <span>
+          <strong>دانه بالجهر</strong>
+          <small>أعمال صحفية</small>
+        </span>
+      </a>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="intro">
+      <div class="container intro-grid">
+        <div>
+          <p class="label">PERSONAL NEWSROOM</p>
+          <h1>أرشيف صحفي يعرض الخبر والتقرير والمقال بوضوح.</h1>
+          <p class="intro-text">
+            مساحة تجمع أعمال دانه بالجهر في الكتابة الصحفية، بتصميم تحريري قريب من المواقع الإخبارية: مادة رئيسية، آخر المواد، تصنيفات واضحة، وتجربة قراءة مريحة.
+          </p>
+        </div>
+        <div class="numbers" aria-label="إحصاءات المواد">
+          <div><strong id="statTotal">0</strong><span>مادة</span></div>
+          <div><strong id="statNews">0</strong><span>خبر</span></div>
+          <div><strong id="statArticles">0</strong><span>مقال</span></div>
+          <div><strong id="statReports">0</strong><span>تقرير</span></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="category-section" id="categories">
+      <div class="container category-grid">
+        <article id="news">
+          <span>01</span>
+          <h2>الأخبار</h2>
+          <p>صياغة مباشرة وفق الهرم المقلوب، تبدأ بالحدث الأهم ثم التفاصيل.</p>
+          <button data-jump="news">عرض الأخبار</button>
+        </article>
+        <article id="articles">
+          <span>02</span>
+          <h2>المقالات</h2>
+          <p>رأي وسياق وأمثلة، مع معالجة أوضح للفكرة وأثرها.</p>
+          <button data-jump="article">عرض المقالات</button>
+        </article>
+        <article id="reports">
+          <span>03</span>
+          <h2>التقارير</h2>
+          <p>تفاصيل أوسع ومشاهدات وزيارات ومعلومات خلف الحدث.</p>
+          <button data-jump="report">عرض التقارير</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="lead-section">
+      <div class="container lead-layout">
+        <article class="lead-story" id="leadStory"></article>
+
+        <aside class="editor-picks">
+          <div class="block-head">
+            <span>مختارات</span>
+            <strong>مواد بارزة</strong>
+          </div>
+          <div id="pickList"></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="latest-section" id="latest">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="label">LATEST</span>
+            <h2>أحدث المواد</h2>
+          </div>
+
+          <div class="tools">
+            <label class="search-box">
+              <input id="searchInput" type="search" placeholder="ابحثي عن عنوان أو موضوع...">
+              <span>⌕</span>
+            </label>
+            <select id="sortSelect" aria-label="ترتيب">
+              <option value="newest">الأحدث</option>
+              <option value="oldest">الأقدم</option>
+              <option value="longest">الأطول قراءة</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="filters" id="filters">
+          <button class="active" data-filter="all">الكل</button>
+          <button data-filter="news">الأخبار</button>
+          <button data-filter="article">المقالات</button>
+          <button data-filter="report">التقارير</button>
+          <button data-filter="saved">المحفوظة</button>
+        </div>
+
+        <div class="content-layout">
+          <section class="story-grid" id="storyGrid"></section>
+</div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-header contact-head">
+          <div>
+            <span class="label">CONTACT</span>
+            <h2>التواصل</h2>
+          </div>
+        </div>
+        <div class="contact-grid">
+          <article class="contact-card">
+            <h3>للتواصل بخصوص المواد أو التعاون</h3>
+            <p>إذا رغبتِ في مشاركة ملاحظة، أو استفسار، أو طلب تعاون، يمكنك استخدام النموذج المقابل أو مراسلتي مباشرة عبر البريد الإلكتروني.</p>
+            <div class="contact-methods">
+              <a href="mailto:jorifahad.m@gmail.com?subject=تواصل%20بخصوص%20الأعمال%20الصحفية" class="contact-pill">jorifahad.m@gmail.com</a>
+              <a href="#latest" class="contact-pill secondary">العودة إلى المواد</a>
+            </div>
+          </article>
+
+          <form class="contact-form" id="contactForm">
+            <label>
+              <span>الاسم</span>
+              <input type="text" name="name" placeholder="اكتب اسمك" required>
+            </label>
+            <label>
+              <span>البريد الإلكتروني</span>
+              <input type="email" name="email" placeholder="name@example.com" required>
+            </label>
+            <label class="full">
+              <span>الرسالة</span>
+              <textarea name="message" rows="5" placeholder="اكتب رسالتك هنا" required></textarea>
+            </label>
+            <div class="form-note">عند الإرسال سيفتح بريدك الافتراضي مع تجهيز الرسالة.</div>
+            <button type="submit" class="form-submit">إرسال الرسالة</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="reader" id="reader" aria-hidden="true">
+    <article class="reader-panel" role="dialog" aria-modal="true">
+      <button class="reader-close" id="readerClose" aria-label="إغلاق">×</button>
+      <div id="readerContent"></div>
+    </article>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> دانه بالجهر</span>
+      <span>أرشيف أعمال صحفية</span>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
