@@ -522,3 +522,45 @@ select{
 
 
 .content-layout.single-column{grid-template-columns:1fr}.content-layout.single-column .story-grid{grid-column:1/-1}
+
+/* إزالة الفراغ الجانبي في قسم أحدث المواد */
+.content-layout,
+.content-layout.fullwidth-layout,
+.content-layout.single-column{
+  display:block !important;
+  width:100% !important;
+}
+
+.story-grid{
+  width:100% !important;
+  max-width:none !important;
+  display:grid !important;
+  grid-template-columns:repeat(3, minmax(0, 1fr)) !important;
+  gap:16px !important;
+}
+
+.story-card.wide{
+  grid-column:1 / -1 !important;
+}
+
+.story-card{
+  width:100% !important;
+}
+
+@media(max-width:980px){
+  .story-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+  }
+  .story-card.wide{
+    grid-column:1 / -1 !important;
+  }
+}
+
+@media(max-width:680px){
+  .story-grid{
+    grid-template-columns:1fr !important;
+  }
+  .story-card.wide{
+    grid-column:auto !important;
+  }
+}
