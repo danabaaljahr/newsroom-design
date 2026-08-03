@@ -519,3 +519,6 @@ select{
 @media(max-width:980px){
   .category-section{padding-top:4px}
 }
+
+
+.content-layout.single-column{grid-template-columns:1fr}.content-layout.single-column .story-grid{grid-column:1/-1}
