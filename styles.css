@@ -564,3 +564,75 @@ select{
     grid-column:auto !important;
   }
 }
+
+/* تعديل قسم أحدث المواد: إزالة الفراغ البصري وتوحيد المحاذاة */
+.latest-section .container{
+  width:min(1380px, calc(100% - 44px));
+}
+
+.latest-section .section-header{
+  display:block !important;
+  margin-bottom:18px !important;
+}
+
+.latest-section .tools{
+  margin-top:14px !important;
+  display:flex !important;
+  justify-content:flex-start !important;
+  align-items:center !important;
+  gap:10px !important;
+}
+
+.latest-section .search-box{
+  min-width:min(460px, 100%) !important;
+}
+
+.filters{
+  justify-content:flex-start !important;
+  margin-bottom:22px !important;
+}
+
+.content-layout,
+.content-layout.fullwidth-layout,
+.content-layout.single-column{
+  display:block !important;
+  width:100% !important;
+}
+
+.story-grid{
+  width:100% !important;
+  max-width:none !important;
+  display:grid !important;
+  grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+  gap:18px !important;
+}
+
+.story-card.wide{
+  grid-column:1 / -1 !important;
+  min-height:245px !important;
+}
+
+.story-card{
+  width:100% !important;
+  min-height:245px !important;
+}
+
+@media(max-width:760px){
+  .latest-section .container{
+    width:min(100% - 22px, 1380px);
+  }
+  .latest-section .tools{
+    display:block !important;
+  }
+  .latest-section .search-box{
+    min-width:0 !important;
+    width:100% !important;
+    margin-bottom:10px !important;
+  }
+  .story-grid{
+    grid-template-columns:1fr !important;
+  }
+  .story-card.wide{
+    grid-column:auto !important;
+  }
+}
