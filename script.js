@@ -140,7 +140,6 @@ function init(){
   renderLead();
   renderStories();
   renderPicks();
-  renderTags();
 
   $('#searchInput').addEventListener('input', e=>{activeQuery=e.target.value; renderStories();});
   $('#sortSelect').addEventListener('change', e=>{activeSort=e.target.value; renderStories();});
