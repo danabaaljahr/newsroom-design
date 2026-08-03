@@ -756,22 +756,3 @@ select{
   .contact-link{display:inline-flex !important}
   .contact-form{grid-template-columns:1fr}
 }
-
-
-/* إزالة الأزرار العلوية والإبقاء على الشعار فقط */
-.topbar-inner{grid-template-columns:auto !important;justify-content:flex-end !important;}
-.topbar-actions,.jump-link{display:none !important;}
-@media(max-width:760px){.topbar-inner{grid-template-columns:1fr !important;justify-content:flex-start !important;}}
-
-
-/* إزالة أزرار الشريط العلوي والإبقاء على الشعار فقط */
-.topbar-inner{
-  display:flex !important;
-  justify-content:flex-end !important;
-  align-items:center;
-  gap:0 !important;
-}
-.topbar-actions, .jump-link{display:none !important;}
-@media(max-width:760px){
-  .topbar-inner{justify-content:flex-end !important;}
-}
