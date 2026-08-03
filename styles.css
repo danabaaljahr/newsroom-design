@@ -71,7 +71,7 @@ button{cursor:pointer}
 }
 .menu-toggle{display:none;border:1px solid var(--line);background:var(--paper);border-radius:12px;width:42px;height:42px}
 
-.intro{padding:54px 0 28px}
+.intro{padding:42px 0 12px}
 .intro-grid{
   display:block;
   max-width:980px;
@@ -86,10 +86,10 @@ button{cursor:pointer}
 }
 h1{
   margin:0;
-  max-width:820px;
-  font-size:clamp(2rem,3.6vw,3.35rem);
-  line-height:1.2;
-  letter-spacing:-.6px;
+  max-width:800px;
+  font-size:clamp(1.85rem,3.15vw,2.85rem);
+  line-height:1.28;
+  letter-spacing:-.35px;
 }
 .intro-text{
   max-width:760px;
@@ -121,7 +121,7 @@ h1{
   font-size:.78rem;
 }
 
-.lead-section{padding:20px 0 36px}
+.lead-section{padding:10px 0 32px}
 .lead-layout{
   display:grid;
   grid-template-columns:minmax(0,1.45fr) minmax(280px,.55fr);
@@ -130,20 +130,20 @@ h1{
 }
 .lead-story{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:.92fr 1.08fr;
   background:var(--paper);
   border:1px solid var(--line);
   border-radius:28px;
   overflow:hidden;
   box-shadow:var(--shadow);
-  min-height:380px;
+  min-height:340px;
 }
 .lead-image{
-  min-height:380px;
+  min-height:340px;
   background:#e6dbcc center/cover no-repeat;
 }
 .lead-body{
-  padding:30px;
+  padding:34px;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -169,8 +169,8 @@ h1{
 }
 .lead-body h2{
   margin:12px 0 12px;
-  font-size:clamp(1.7rem,3vw,2.7rem);
-  line-height:1.25;
+  font-size:clamp(1.55rem,2.55vw,2.25rem);
+  line-height:1.34;
 }
 .lead-body p{margin:0;color:var(--muted)}
 .read-btn{
@@ -186,8 +186,10 @@ h1{
   background:var(--navy);
   color:#fff;
   border-radius:28px;
-  padding:22px;
+  padding:20px;
   box-shadow:var(--shadow);
+  max-height:340px;
+  overflow:auto;
 }
 .block-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:12px}
 .block-head span{color:#c8a66b;font-size:.84rem;font-weight:900}
@@ -490,4 +492,16 @@ select{
   .intro-grid{max-width:100%}
   .numbers{gap:8px;margin-top:18px}
   .numbers div{min-width:calc(50% - 4px);padding:10px 12px}
+}
+
+@media(max-width:980px){
+  .lead-story{grid-template-columns:1fr}
+  .lead-image{min-height:245px}
+}
+@media(max-width:520px){
+  h1{font-size:2rem;line-height:1.25}
+  .intro{padding-top:30px}
+  .lead-section{padding-top:6px}
+  .lead-image{min-height:220px}
+  .lead-body h2{font-size:1.55rem}
 }
